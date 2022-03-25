@@ -12,9 +12,7 @@
     "test:ci": "jest --runInBand",
     "generate": "yarn plop --plopfile generators/plopfile.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "postinstall": "husky install",
-    "prepare": "husky install"
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
     "src/**/*": [
@@ -49,7 +47,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^7.0.2",
     "jest": "^27.4.7",
     "jest-styled-components": "^7.0.5",
     "lint-staged": "^12.3.3",
