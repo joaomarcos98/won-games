@@ -1,43 +1,37 @@
-import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
-import { LogoProps } from '.'
+import { LogoProps } from '.';
 
-media
+const containerModifiers = {
+  normal: () => css`
+    width: 11rem;
+    height: 3.3rem;
+  `,
+  large: () => css`
+    width: 20rem;
+    height: 5.9rem;
+  `,
 
-const wrapperModifier = {
-    normal: () => css`
-        width: 11rem;
-        height: 3.3rem;
-    `,
-
-    large: () => css`
-        width: 20rem;
-        height: 5.9rem;
-    `,
-
-    hideOnMobile: () => css`
-        ${media.lessThan('medium')`
-            width: 5.8rem;
-            height: 4.5rem;
-
-            svg{
-                height: 4.5rem;
-                pointer-events: none;
-            }
-
-            .text{
-                display: none;
-            }
-        `}
-    `
-}
+  hideTextOnMobile: () => css`
+    ${media.lessThan('medium')`
+      width: 5.8rem;
+      height: 4.5rem;
+      > svg {
+        height: 4.5rem;
+        pointer-events: none;
+        > .text {
+          display: none;
+        }
+      }
+    `}
+  `,
+};
 
 export const Wrapper = styled.div<LogoProps>`
-    ${({ theme, color, size, hideOnMobile }) => css`
-        color: ${theme.colors[color!]};
-
-        ${!!size && wrapperModifier[size]}
-        ${!!hideOnMobile && wrapperModifier.hideOnMobile}
-    `}
-`
+  ${({ theme, color, size, hideTextOnMobile }) => css`
+    color: ${theme.colors[color!]};
+    ${!!size && containerModifiers[size]};
+    ${!!hideTextOnMobile && containerModifiers.hideTextOnMobile};
+  `}
+`;
