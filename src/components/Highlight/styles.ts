@@ -2,10 +2,35 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 import { HighlightProps } from '.'
 
-type WrapperProps = Pick<HighlightProps, "backgroundImage">
+type WrapperProps = Pick<HighlightProps, 'backgroundImage' | 'alignment'>
+
+
+const wrapperModifiers = {
+    right: () => css`
+        grid-template-areas: 'floatImage content';
+        grid-template-columns: '1.3fr 2fr';
+
+        ${Content} {
+            text-align: right;
+        }
+
+    `,
+    left: () => css`
+        grid-template-areas: 'content floatImage';
+        grid-template-columns: '2fr 1.3fr';
+
+        ${Content} {
+            text-align: left;
+        }
+
+        ${FloatImage} {
+            justify-self: end;
+        }
+    `
+}
 
 export const Wrapper = styled.section<WrapperProps>`
-    ${({ backgroundImage }) => css`
+    ${({ backgroundImage, alignment }) => css`
         position: relative;
         height: 23rem;
         background-image: url(${backgroundImage});
@@ -13,22 +38,22 @@ export const Wrapper = styled.section<WrapperProps>`
         background-size: cover;
 
         display: grid;
-        grid-template-areas: 'floatImage content';
-        grid-template-columns: '1.3fr 2fr';
 
 
-        ${media.greaterThan("medium")`
+        ${media.greaterThan('medium')`
             height: 32rem;
         `}
 
         &::after {
-            content: "";
+            content: '';
             position: absolute;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.6);
 
         }
+
+        ${wrapperModifiers[alignment!]()}
     `}
 `
 export const FloatImage = styled.img`
@@ -38,11 +63,12 @@ export const FloatImage = styled.img`
         max-width: 100%;
 
         align-self: end;
+        padding: 0 ${theme.spacings.xsmall};
 
         grid-area: floatImage;
     `}
 
-    ${media.greaterThan("medium")`
+    ${media.greaterThan('medium')`
             max-height: 32rem;
         `}
 `
@@ -50,12 +76,11 @@ export const FloatImage = styled.img`
 export const Content = styled.div`
     ${({ theme }) => css`
         z-index: ${theme.layers.base};
-        text-align: right;
         padding: ${theme.spacings.xsmall};
 
         grid-area: content;
 
-        ${media.greaterThan("medium")`
+        ${media.greaterThan('medium')`
             align-self: end;
             padding: ${theme.spacings.large};
         `}
@@ -68,7 +93,7 @@ export const Title = styled.h2`
         font-weight: ${theme.font.bold};
         color: ${theme.colors.white};
 
-        ${media.greaterThan("medium")`
+        ${media.greaterThan('medium')`
             font-weight: ${theme.font.sizes.xxlarge};
         `}
     `}
@@ -81,7 +106,7 @@ export const Subtitle = styled.h3`
         color: ${theme.colors.white};
         margin-bottom: ${theme.spacings.small};
 
-        ${media.greaterThan("medium")`
+        ${media.greaterThan('medium')`
             font-weight: ${theme.font.sizes.large};
         `}
     `}
