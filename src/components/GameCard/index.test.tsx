@@ -14,14 +14,14 @@ describe('<GameCard />', () => {
     it('should render the heading', () => {
         renderWithTheme(<GameCard {...props} />)
 
-        expect(screen.getByRole('img')).toHaveAttribute(
+        expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
             'src', props.img
         )
-        expect(screen.getByRole('heading', { name: /population zero/i }))
+        expect(screen.getByRole('heading', { name: props.title }))
             .toBeInTheDocument()
-        expect(screen.getByRole('heading', { name: /rockstar games/i }))
+        expect(screen.getByRole('heading', { name: props.developer }))
             .toBeInTheDocument()
-        expect(screen.getByText('R$ 235,00'))
+        expect(screen.getByText(props.price))
             .toBeInTheDocument()
     })
 })
