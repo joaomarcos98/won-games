@@ -9,12 +9,14 @@ export default {
         developer: 'Rockstar Games',
         img: 'https://source.unsplash.com/user/willianjusten/300x140',
         price: 'R$ 235,00',
-        favorite: false
+        favorite: false,
+        ribbon: '20% OFF',
+        ribbonSize: 'small',
+        ribbonColor: 'primary'
     },
     argTypes: {
-        onFav: {
-            action: 'clicked'
-        }
+        onFav: { action: 'clicked' },
+        ribbon: { type: 'string' }
     }
 
 } as Meta
