@@ -10,6 +10,9 @@ export default {
     argTypes: {
         children: {
             type: "string"
+        },
+        ribbon: {
+            type: 'string'
         }
     }
 } as Meta
