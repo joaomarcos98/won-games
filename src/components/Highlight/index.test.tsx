@@ -3,7 +3,7 @@ import { renderWithTheme } from 'utils/tests/helper/renderWithTheme'
 
 import Highlight from '.'
 import * as S from './styles'
-import { item } from './mock'
+import item  from './mock'
 
 
 

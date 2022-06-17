@@ -3,7 +3,7 @@ import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helper/renderWithTheme'
 
 import GameCardSlider from '.'
-import { items } from './mock'
+import items  from './mock'
 
 
 describe('<GameCardSlider />', () => {

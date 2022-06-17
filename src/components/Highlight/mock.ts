@@ -1,4 +1,4 @@
-export const item = {
+export default {
     title: "Heading 1",
     subtitle: "Heading 2",
     buttonLabel: "buy now",
