@@ -1,21 +1,15 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helper/renderWithTheme'
-import * as S from './styles'
-
 
 import Highlight from '.'
+import * as S from './styles'
+import { item } from './mock'
 
-const props = {
-    title: "Heading 1",
-    subtitle: "Heading 2",
-    buttonLabel: "buy now",
-    buttonLink: "/rdr2",
-    backgroundImage: "/img/red-dead-img.jpg"
-}
+
 
 describe('<Highlight />', () => {
     it('should render the headings and buttons', () => {
-        renderWithTheme(<Highlight {...props} />)
+        renderWithTheme(<Highlight {...item} />)
 
         expect(screen.getByRole('heading', { name: /heading 1/i })).toBeInTheDocument()
         expect(screen.getByRole('heading', { name: /heading 2/i })).toBeInTheDocument()
@@ -23,24 +17,24 @@ describe('<Highlight />', () => {
     })
 
     it('should render background image', () => {
-        const { container } = renderWithTheme(<Highlight {...props} />)
+        const { container } = renderWithTheme(<Highlight {...item} />)
 
         expect(container.firstChild).toHaveStyle({
-            backgroundImage: `url(${props.backgroundImage})`
+            backgroundImage: `url(${item.backgroundImage})`
         })
     })
 
     it('should render background image', () => {
-        renderWithTheme(<Highlight {...props} floatImage='/float-image.png' />)
+        renderWithTheme(<Highlight {...item} floatImage='/float-image.png' />)
 
-        expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
+        expect(screen.getByRole('img', { name: item.title })).toHaveAttribute(
             'src',
             '/float-image.png'
         )
     })
 
     it('should render align right by default', () => {
-        const { container } = renderWithTheme(<Highlight {...props} />)
+        const { container } = renderWithTheme(<Highlight {...item} />)
 
         expect(container.firstChild).toHaveStyleRule(
             'grid-template-areas',
@@ -55,7 +49,7 @@ describe('<Highlight />', () => {
     })
 
     it('should render align left', () => {
-        const { container } = renderWithTheme(<Highlight {...props} alignment='left' />)
+        const { container } = renderWithTheme(<Highlight {...item} alignment='left' />)
 
         expect(container.firstChild).toHaveStyleRule(
             'grid-template-areas',
