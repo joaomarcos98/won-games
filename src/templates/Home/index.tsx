@@ -44,7 +44,7 @@ const Home = ({
                 News
             </Heading>
 
-            <GameCardSlider items={newGames} color='black' />
+            <GameCardSlider items={newGames} color='white' />
         </Container>
 
         <Container>

@@ -4,6 +4,7 @@ import * as BannerStyles from 'components/Banner/styles'
 
 export const Wrapper = styled.main`
     ${({ theme }) => css`
+
         .slick-dots {
             list-style: none;
             display: flex !important;
@@ -32,8 +33,12 @@ export const Wrapper = styled.main`
                 height: 1.2rem;
                 cursor: pointer;
             }
+
+
         }
         ${media.greaterThan('large')`
+            position: relative;
+
             ${BannerStyles.Wrapper} {
                 max-width: 104rem;
                 margin: 0 auto;
@@ -42,8 +47,8 @@ export const Wrapper = styled.main`
                 position: absolute;
                 right: 0;
                 flex-direction: column;
-                height: 100%;
-                top: 0;
+                top: 50%;
+                transform: translateY(-50%);
                 margin: 0;
                 li {
                 margin: ${theme.spacings.xxsmall} 0;

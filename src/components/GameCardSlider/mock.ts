@@ -34,4 +34,32 @@ export default [
         price: 'R$ 235,00',
         promotionalPrice: 'R$ 215,00'
     },
+    {
+        title: 'Population Zero 6',
+        developer: 'Rockstar Games',
+        img: 'https://source.unsplash.com/user/willianjusten/300x143',
+        price: 'R$ 235,00',
+        promotionalPrice: 'R$ 215,00'
+    },
+    {
+        title: 'Population Zero 7',
+        developer: 'Rockstar Games',
+        img: 'https://source.unsplash.com/user/willianjusten/300x144',
+        price: 'R$ 235,00',
+        promotionalPrice: 'R$ 215,00'
+    },
+    {
+        title: 'Population Zero 8',
+        developer: 'Rockstar Games',
+        img: 'https://source.unsplash.com/user/willianjusten/300x143',
+        price: 'R$ 235,00',
+        promotionalPrice: 'R$ 215,00'
+    },
+    {
+        title: 'Population Zero 9',
+        developer: 'Rockstar Games',
+        img: 'https://source.unsplash.com/user/willianjusten/300x144',
+        price: 'R$ 235,00',
+        promotionalPrice: 'R$ 215,00'
+    },
 ]
