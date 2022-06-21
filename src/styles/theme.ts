@@ -51,4 +51,4 @@ export default {
         small: 2,
         medium: 4
     }
-}
+} as const
