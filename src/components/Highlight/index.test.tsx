@@ -11,8 +11,8 @@ describe('<Highlight />', () => {
     it('should render the headings and buttons', () => {
         renderWithTheme(<Highlight {...item} />)
 
-        expect(screen.getByRole('heading', { name: /heading 1/i })).toBeInTheDocument()
-        expect(screen.getByRole('heading', { name: /heading 2/i })).toBeInTheDocument()
+        expect(screen.getAllByRole('heading', { name: /red dead/i })).toHaveLength(2)
+        expect(screen.getByRole('heading', { name: /red dead is back!/i })).toBeInTheDocument()
         expect(screen.getByText(/buy now/i)).toBeInTheDocument()
     })
 
