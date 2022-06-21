@@ -5,14 +5,14 @@ import * as S from './styles'
 
 const Footer = () => (
     <S.Wrapper>
-        <Logo color='black' />
+        <Logo color="black" />
         <S.Content>
             <S.Column>
                 <Heading
-                    color='black'
-                    size='small'
+                    color="black"
+                    size="small"
                     lineBottom
-                    lineColor='secondary'
+                    lineColor="secondary"
                 >
                     Contact
                 </Heading>
@@ -21,14 +21,14 @@ const Footer = () => (
 
             <S.Column>
                 <Heading
-                    color='black'
-                    size='small'
+                    color="black"
+                    size="small"
                     lineBottom
-                    lineColor='secondary'
+                    lineColor="secondary"
                 >
                     Follow us
                 </Heading>
-                <nav aria-labelledby='social media'>
+                <nav aria-labelledby="social media">
                     <a
                         href="https://instagram.com/won-games"
                         target="_blank"
@@ -62,31 +62,31 @@ const Footer = () => (
             </S.Column>
             <S.Column>
                 <Heading
-                    color='black'
-                    size='small'
+                    color="black"
+                    size="small"
                     lineBottom
-                    lineColor='secondary'
+                    lineColor="secondary"
                 >
                     Links
                 </Heading>
-                <nav aria-labelledby='footer resources'>
+                <nav aria-labelledby="footer resources">
                     <Link href="/">
                         <a>Home</a>
                     </Link>
                     <Link href="/games">
                         <a>Store</a>
                     </Link>
-                    <Link href="/search" >
+                    <Link href="/search">
                         <a>Buscar</a>
                     </Link>
                 </nav>
             </S.Column>
             <S.Column>
                 <Heading
-                    color='black'
-                    size='small'
+                    color="black"
+                    size="small"
                     lineBottom
-                    lineColor='secondary'
+                    lineColor="secondary"
                 >
                     Location
                 </Heading>

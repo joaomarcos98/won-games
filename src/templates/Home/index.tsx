@@ -43,16 +43,16 @@ const Home = ({
 
         <S.SectionNews>
             <Container>
-                <Heading lineLeft lineColor='secondary' color='black'>
+                <Heading lineLeft lineColor="secondary" color="black">
                     News
                 </Heading>
-                <GameCardSlider items={newGames} color='white' />
+                <GameCardSlider items={newGames} color="white" />
             </Container>
         </S.SectionNews>
 
         <S.SectionMostPopular>
             <Container>
-                <Heading lineLeft lineColor='secondary' >
+                <Heading lineLeft lineColor="secondary">
                     Most popular
                 </Heading>
 
@@ -63,7 +63,7 @@ const Home = ({
 
         <S.SectionUpcoming>
             <Container>
-                <Heading lineLeft lineColor='secondary'>
+                <Heading lineLeft lineColor="secondary">
                     Upcomming
                 </Heading>
 
@@ -75,7 +75,7 @@ const Home = ({
 
         <S.SectionFreeGames>
             <Container>
-                <Heading lineLeft lineColor='secondary' color='white'>
+                <Heading lineLeft lineColor="secondary" color="white">
                     Free games
                 </Heading>
 

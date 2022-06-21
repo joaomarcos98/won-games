@@ -34,14 +34,13 @@ const wrapperModifiers = {
             border-top-width: 0.7rem;
             border-right-width: 1.5rem;
         }
-    `,
+    `
 }
 
-type WrapperProps = Omit<RibbonProps, "children">
+type WrapperProps = Omit<RibbonProps, 'children'>
 
 export const Wrapper = styled.div<WrapperProps>`
     ${({ theme, color, size }) => css`
-
         position: absolute;
         display: flex;
         align-items: center;
@@ -49,9 +48,8 @@ export const Wrapper = styled.div<WrapperProps>`
         color: ${theme.colors.white};
         top: 2rem;
 
-
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             right: 0;
             border-style: solid;
@@ -59,7 +57,6 @@ export const Wrapper = styled.div<WrapperProps>`
             border-right-color: transparent;
             border-bottom-color: transparent;
             border-bottom-width: 1rem;
-
         }
 
         ${!!size && wrapperModifiers[size](theme)}

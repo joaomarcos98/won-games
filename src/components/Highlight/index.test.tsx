@@ -3,16 +3,18 @@ import { renderWithTheme } from 'utils/tests/helper/renderWithTheme'
 
 import Highlight from '.'
 import * as S from './styles'
-import item  from './mock'
-
-
+import item from './mock'
 
 describe('<Highlight />', () => {
     it('should render the headings and buttons', () => {
         renderWithTheme(<Highlight {...item} />)
 
-        expect(screen.getAllByRole('heading', { name: /red dead/i })).toHaveLength(2)
-        expect(screen.getByRole('heading', { name: /red dead is back!/i })).toBeInTheDocument()
+        expect(
+            screen.getAllByRole('heading', { name: /red dead/i })
+        ).toHaveLength(2)
+        expect(
+            screen.getByRole('heading', { name: /red dead is back!/i })
+        ).toBeInTheDocument()
         expect(screen.getByText(/buy now/i)).toBeInTheDocument()
     })
 
@@ -25,7 +27,7 @@ describe('<Highlight />', () => {
     })
 
     it('should render background image', () => {
-        renderWithTheme(<Highlight {...item} floatImage='/float-image.png' />)
+        renderWithTheme(<Highlight {...item} floatImage="/float-image.png" />)
 
         expect(screen.getByRole('img', { name: item.title })).toHaveAttribute(
             'src',
@@ -41,24 +43,22 @@ describe('<Highlight />', () => {
             "'floatImage content'"
         )
 
-        expect(container.firstChild).toHaveStyleRule(
-            'text-align',
-            "right", {
+        expect(container.firstChild).toHaveStyleRule('text-align', 'right', {
             modifier: `${S.Content}`
         })
     })
 
     it('should render align left', () => {
-        const { container } = renderWithTheme(<Highlight {...item} alignment='left' />)
+        const { container } = renderWithTheme(
+            <Highlight {...item} alignment="left" />
+        )
 
         expect(container.firstChild).toHaveStyleRule(
             'grid-template-areas',
             "'content floatImage'"
         )
 
-        expect(container.firstChild).toHaveStyleRule(
-            'text-align',
-            "left", {
+        expect(container.firstChild).toHaveStyleRule('text-align', 'left', {
             modifier: `${S.Content}`
         })
     })

@@ -5,11 +5,11 @@ export default {
     title: 'Ribbon',
     component: Ribbon,
     args: {
-        children: "Best Seller"
+        children: 'Best Seller'
     },
     argTypes: {
         children: {
-            type: "string"
+            type: 'string'
         },
         ribbon: {
             type: 'string'
@@ -20,13 +20,12 @@ export default {
 export const Default: Story<RibbonProps> = (args) => (
     <div
         style={{
-            width: "40rem",
-            height: "25rem",
-            position: "relative",
-            background: "#AAA"
+            width: '40rem',
+            height: '25rem',
+            position: 'relative',
+            background: '#AAA'
         }}
     >
-
         <Ribbon {...args} />
     </div>
 )

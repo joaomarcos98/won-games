@@ -43,14 +43,14 @@ const settings: SliderSettings = {
             }
         }
     ],
-    nextArrow: <ArrowForwardIos aria-label='next games' />,
-    prevArrow: <ArrowBackIos aria-label='previous games' />
+    nextArrow: <ArrowForwardIos aria-label="next games" />,
+    prevArrow: <ArrowBackIos aria-label="previous games" />
 }
 
 const GameCardSlider = ({ items, color = 'white' }: GameCardSliderProps) => (
     <S.Wrapper color={color}>
         <Slider settings={settings}>
-            {items.map(item => (
+            {items.map((item) => (
                 <GameCard key={item.title} {...item} />
             ))}
         </Slider>

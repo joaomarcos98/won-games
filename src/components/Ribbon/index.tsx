@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 import * as S from './styles'
 
-export type RibbonColors = "primary" | "secondary"
-export type RibbonSize = "normal" | "small"
+export type RibbonColors = 'primary' | 'secondary'
+export type RibbonSize = 'normal' | 'small'
 
 export type RibbonProps = {
     children: ReactNode
@@ -10,11 +10,12 @@ export type RibbonProps = {
     size?: RibbonSize
 }
 
-const Ribbon = ({ children, color = "primary", size = "normal" }: RibbonProps) => (
-    <S.Wrapper
-        color={color}
-        size={size}
-    >
+const Ribbon = ({
+    children,
+    color = 'primary',
+    size = 'normal'
+}: RibbonProps) => (
+    <S.Wrapper color={color} size={size}>
         {children}
     </S.Wrapper>
 )

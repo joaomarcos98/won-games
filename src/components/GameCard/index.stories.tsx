@@ -18,24 +18,19 @@ export default {
         onFav: { action: 'clicked' },
         ribbon: { type: 'string' }
     }
-
 } as Meta
 
 export const Default: Story<GameCardProps> = (args) => (
-    <div
-        style={{ width: '30rem' }}
-    >
+    <div style={{ width: '30rem' }}>
         <GameCard {...args} />
     </div>
 )
 
 export const PromotionalPrice: Story<GameCardProps> = (args) => (
-    <div
-        style={{ width: '30rem' }}
-    >
+    <div style={{ width: '30rem' }}>
         <GameCard {...args} />
     </div>
 )
 PromotionalPrice.args = {
-    promotionalPrice: "R$150,00"
+    promotionalPrice: 'R$150,00'
 }

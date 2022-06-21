@@ -4,7 +4,6 @@ import * as BannerStyles from 'components/Banner/styles'
 
 export const Wrapper = styled.main`
     ${({ theme }) => css`
-
         .slick-dots {
             list-style: none;
             display: flex !important;
@@ -24,7 +23,7 @@ export const Wrapper = styled.main`
                 cursor: pointer;
 
                 &.slick-active {
-                background: ${theme.colors.primary};
+                    background: ${theme.colors.primary};
                 }
             }
             button {
@@ -33,8 +32,6 @@ export const Wrapper = styled.main`
                 height: 1.2rem;
                 cursor: pointer;
             }
-
-
         }
         ${media.greaterThan('large')`
             position: relative;

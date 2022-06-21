@@ -3,7 +3,6 @@ import GameCardSlider, { GameCardSliderProps } from '.'
 
 import items from './mock'
 
-
 export default {
     title: 'GameCardSlider',
     component: GameCardSlider,
@@ -16,7 +15,7 @@ export default {
     }
 } as Meta
 
-export const Default: Story<GameCardSliderProps> = args => (
+export const Default: Story<GameCardSliderProps> = (args) => (
     <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
         <GameCardSlider {...args} />
     </div>

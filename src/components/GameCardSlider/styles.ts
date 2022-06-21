@@ -5,9 +5,8 @@ import { GameCardSliderProps } from '.'
 type WrapperProps = Pick<GameCardSliderProps, 'color'>
 
 export const Wrapper = styled.section<WrapperProps>`
-  ${({ theme, color }) => css`
+    ${({ theme, color }) => css`
         position: relative;
-
 
         ${media.lessThan('huge')`
             overflow-x: hidden;

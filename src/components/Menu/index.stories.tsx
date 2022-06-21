@@ -3,14 +3,14 @@ import Menu, { MenuProps } from '.'
 
 export default {
     title: 'Menu',
-    component: Menu,
+    component: Menu
 } as Meta
 
-export const Default: Story<MenuProps> = (args) => <Menu {...args}/>
+export const Default: Story<MenuProps> = (args) => <Menu {...args} />
 
 Default.parameters = {
-    layout: "fullscreen",
+    layout: 'fullscreen',
     backgrounds: {
-        default: "won-dark"
+        default: 'won-dark'
     }
 }

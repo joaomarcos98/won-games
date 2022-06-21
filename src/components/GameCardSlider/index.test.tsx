@@ -3,8 +3,7 @@ import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helper/renderWithTheme'
 
 import GameCardSlider from '.'
-import items  from './mock'
-
+import items from './mock'
 
 describe('<GameCardSlider />', () => {
     it('should render with four active items', () => {
@@ -14,7 +13,7 @@ describe('<GameCardSlider />', () => {
     })
 
     it('should render white arrow if color passed ', () => {
-        renderWithTheme(<GameCardSlider items={items} color='white' />)
+        renderWithTheme(<GameCardSlider items={items} color="white" />)
 
         expect(screen.getByLabelText(/previous games/i)).toHaveStyle({
             color: '#FAFAFA'

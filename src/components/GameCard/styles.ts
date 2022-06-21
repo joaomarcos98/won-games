@@ -112,7 +112,7 @@ const priceModifiers = {
         color: ${theme.colors.gray};
         text-decoration: line-through;
         margin-right: ${theme.spacings.xsmall};
-    `,
+    `
 }
 
 export const Price = styled.div<PriceProps>`
@@ -122,11 +122,8 @@ export const Price = styled.div<PriceProps>`
         height: 3rem;
         align-items: center;
 
-        ${!isPromotional ?
-            priceModifiers.default(theme) :
-            priceModifiers.promotional(theme)
-        }
+        ${!isPromotional
+            ? priceModifiers.default(theme)
+            : priceModifiers.promotional(theme)}
     `}
 `
-
-

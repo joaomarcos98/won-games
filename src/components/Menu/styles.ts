@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-
 type MenuFullProps = {
     isOpen: boolean
 }
@@ -25,7 +24,7 @@ export const IconWrapper = styled.div`
     `}
 `
 export const LogoWrapper = styled.div`
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -40,14 +39,14 @@ export const MenuGroup = styled.div`
         align-items: center;
 
         > div {
-            margin-left:  ${theme.spacings.xsmall};
+            margin-left: ${theme.spacings.xsmall};
         }
     `}
 `
 
 export const MenuNav = styled.div`
     ${({ theme }) => css`
-        ${media.greaterThan("medium")`
+        ${media.greaterThan('medium')`
             margin-left: ${theme.spacings.small};
         `}
     `}
@@ -58,18 +57,18 @@ export const MenuLink = styled.a`
         position: relative;
         color: ${theme.colors.white};
         font-size: ${theme.font.sizes.medium};
-        margin: .3rem ${theme.spacings.small} 0;
+        margin: 0.3rem ${theme.spacings.small} 0;
         text-decoration: none;
         text-align: center;
 
-        &:hover{
-            &::after{
-                content: "";
+        &:hover {
+            &::after {
+                content: '';
                 position: absolute;
                 display: block;
-                height: .3rem;
+                height: 0.3rem;
                 background-color: ${theme.colors.primary};
-                animation: hoverAnimation .2s forwards;
+                animation: hoverAnimation 0.2s forwards;
             }
 
             @keyframes hoverAnimation {
@@ -103,7 +102,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
         transition: opacity 0.3s ease-in-out;
         overflow: hidden;
         opacity: ${isOpen ? 1 : 0};
-        pointer-events: ${isOpen ? "all" : "none"};
+        pointer-events: ${isOpen ? 'all' : 'none'};
 
         > svg {
             position: absolute;
@@ -122,12 +121,12 @@ export const MenuFull = styled.nav<MenuFullProps>`
             font-weight: ${theme.font.bold};
             font-size: ${theme.font.sizes.xlarge};
             margin-bottom: ${theme.spacings.small};
-            transform: ${isOpen ? "translateY(0)" : "translateY(3rem)"};
+            transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
             transition: transform 0.3s ease-in-out;
         }
 
         ${RegisterBox} {
-            transform: ${isOpen ? "translateY(0)" : "translateY(3rem)"};
+            transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
             transition: transform 0.3s ease-in-out;
         }
 
@@ -142,7 +141,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
 `
 
 export const RegisterBox = styled.div`
-   ${({ theme }) => css`
+    ${({ theme }) => css`
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -153,7 +152,7 @@ export const RegisterBox = styled.div`
             margin: ${theme.spacings.xxsmall} 0;
             font-size: ${theme.font.sizes.xsmall};
         }
-   `}
+    `}
 `
 
 export const CreateAccount = styled.a`

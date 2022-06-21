@@ -2,11 +2,9 @@ import styled, { css } from 'styled-components'
 import * as HeadingStyles from 'components/Heading/styles'
 import media from 'styled-media-query'
 
-
-
 export const Wrapper = styled.footer`
     ${HeadingStyles.Wrapper} {
-        text-transform:  uppercase;
+        text-transform: uppercase;
     }
 `
 
@@ -17,15 +15,16 @@ export const Content = styled.div`
         gap: ${theme.grid.gutter};
         margin-top: ${theme.spacings.medium};
 
-        ${media.greaterThan("medium")`
+        ${media.greaterThan('medium')`
             grid-template-columns: repeat(4, 1fr);
         `}
     `}
 `
 
 export const Column = styled.div`
-     ${({ theme }) => css`
-        a, span {
+    ${({ theme }) => css`
+        a,
+        span {
             display: block;
             color: ${theme.colors.gray};
             text-decoration: none;
@@ -37,7 +36,7 @@ export const Column = styled.div`
         a:hover {
             text-decoration: underline;
         }
-     `}
+    `}
 `
 
 export const Copyright = styled.div`

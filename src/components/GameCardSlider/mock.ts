@@ -33,5 +33,5 @@ export default [
         img: 'https://source.unsplash.com/user/willianjusten/300x144',
         price: 'R$ 235,00',
         promotionalPrice: 'R$ 215,00'
-    },
+    }
 ]

@@ -4,15 +4,13 @@ import * as S from './styles'
 
 export type SliderSettings = Settings
 export type SliderProps = {
-    children: ReactNode,
+    children: ReactNode
     settings: SliderSettings
 }
 
 const Slider = ({ children, settings }: SliderProps) => (
     <S.Wrapper>
-        <SlickSlider {...settings}>
-            {children}
-        </SlickSlider>
+        <SlickSlider {...settings}>{children}</SlickSlider>
     </S.Wrapper>
 )
 

@@ -4,7 +4,6 @@ import { HighlightProps } from '.'
 
 type WrapperProps = Pick<HighlightProps, 'backgroundImage' | 'alignment'>
 
-
 const wrapperModifiers = {
     right: () => css`
         grid-template-areas: 'floatImage content';
@@ -13,7 +12,6 @@ const wrapperModifiers = {
         ${Content} {
             text-align: right;
         }
-
     `,
     left: () => css`
         grid-template-areas: 'content floatImage';
@@ -39,7 +37,6 @@ export const Wrapper = styled.section<WrapperProps>`
 
         display: grid;
 
-
         ${media.greaterThan('medium')`
             height: 32rem;
         `}
@@ -50,7 +47,6 @@ export const Wrapper = styled.section<WrapperProps>`
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.6);
-
         }
 
         ${wrapperModifiers[alignment!]()}
@@ -89,7 +85,7 @@ export const Content = styled.div`
 
 export const Title = styled.h2`
     ${({ theme }) => css`
-        font-size:${theme.font.sizes.large};
+        font-size: ${theme.font.sizes.large};
         font-weight: ${theme.font.bold};
         color: ${theme.colors.white};
 
@@ -101,7 +97,7 @@ export const Title = styled.h2`
 
 export const Subtitle = styled.h3`
     ${({ theme }) => css`
-        font-size:${theme.font.sizes.small};
+        font-size: ${theme.font.sizes.small};
         font-weight: ${theme.font.light};
         color: ${theme.colors.white};
         margin-bottom: ${theme.spacings.small};
@@ -111,4 +107,3 @@ export const Subtitle = styled.h3`
         `}
     `}
 `
-
