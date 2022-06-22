@@ -32,8 +32,6 @@ describe('<Button />', () => {
             padding: '0.8rem 4.8rem',
             'font-size': '1.6rem'
         })
-
-        // expect(container.firstChild).toMatchSnapshot()
     })
 
     it('should render a full width  version', () => {
@@ -53,6 +51,28 @@ describe('<Button />', () => {
 
         expect(screen.getByText(/buy now/i)).toBeInTheDocument()
         expect(screen.getByTestId(/icon/i)).toBeInTheDocument()
+    })
+
+    it('should render a minimal version', () => {
+        renderWithTheme(
+            <Button minimal >
+                Buy now
+            </Button>
+        )
+
+        expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyle({
+            background: 'none',
+            color: '#F231A5'
+        })
+
+        expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyleRule(
+            'background',
+            'none',
+            {
+                modifier: ':hover'
+            }
+        )
+
     })
 
     it('should render Button as a link', () => {
