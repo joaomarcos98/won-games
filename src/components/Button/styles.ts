@@ -37,7 +37,7 @@ const wrapperModifiers = {
         background: none;
         color: ${theme.colors.primary};
 
-        &:hover{
+        &:hover {
             color: ${darken(0.1, theme.colors.primary)};
         }
     `
@@ -59,8 +59,8 @@ export const Wrapper = styled.button<WrapperProps>`
 
         &:hover {
             background: ${minimal
-            ? 'none'
-            : 'linear-gradient(180deg, #e35565 0%, #d958a6 50%)'};
+                ? 'none'
+                : 'linear-gradient(180deg, #e35565 0%, #d958a6 50%)'};
         }
 
         ${!!size && wrapperModifiers[size](theme)}

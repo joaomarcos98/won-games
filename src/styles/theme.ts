@@ -50,5 +50,9 @@ export default {
     offset: {
         small: 2,
         medium: 4
+    },
+    transition: {
+        default: '0.3s ease-in-out',
+        fast: '0.1s ease-in-out'
     }
 } as const
