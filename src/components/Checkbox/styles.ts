@@ -23,7 +23,7 @@ export const Input = styled.input`
         position: relative;
         outline: none;
 
-        &::before{
+        &::before {
             content: '';
             width: 0.6rem;
             height: 0.9rem;
@@ -37,11 +37,11 @@ export const Input = styled.input`
             transition: ${theme.transition.fast};
         }
 
-        &:focus{
+        &:focus {
             box-shadow: 0 0 0.5rem ${theme.colors.primary};
         }
 
-        &:checked{
+        &:checked {
             border-color: ${theme.colors.primary};
             background-color: ${theme.colors.primary};
 
