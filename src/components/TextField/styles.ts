@@ -36,3 +36,14 @@ export const Input = styled.input`
         width: 100%;
     `}
 `
+
+export const Icon = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    width: 2.2rem;
+    color: ${theme.colors.gray};
+    & > svg {
+      width: 100%;
+    }
+  `}
+`
