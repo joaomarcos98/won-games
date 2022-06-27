@@ -8,7 +8,7 @@ import TextField from '.'
 
 describe('<TextField />', () => {
     it('Renders with Label', () => {
-        renderWithTheme(<TextField label='Label' labelFor='Field' id='Field' />)
+        renderWithTheme(<TextField label="Label" labelFor="Field" id="Field" />)
 
         expect(screen.getByLabelText('Label')).toBeInTheDocument()
     })
@@ -20,7 +20,7 @@ describe('<TextField />', () => {
     })
 
     it('Renders with placeholder', () => {
-        renderWithTheme(<TextField placeholder='hey you' />)
+        renderWithTheme(<TextField placeholder="hey you" />)
 
         expect(screen.getByPlaceholderText('hey you')).toBeInTheDocument()
     })
@@ -30,9 +30,9 @@ describe('<TextField />', () => {
         renderWithTheme(
             <TextField
                 onInput={onInput}
-                label='TextField'
-                labelFor='TextField'
-                id='TextField'
+                label="TextField"
+                labelFor="TextField"
+                id="TextField"
             />
         )
 
@@ -48,7 +48,7 @@ describe('<TextField />', () => {
     })
 
     it('Renders with Icon', () => {
-        renderWithTheme(<TextField icon={<Email data-testid='icon' />} />)
+        renderWithTheme(<TextField icon={<Email data-testid="icon" />} />)
 
         expect(screen.getByTestId('icon')).toBeInTheDocument()
     })
@@ -58,11 +58,12 @@ describe('<TextField />', () => {
         renderWithTheme(
             <TextField
                 onInput={onInput}
-                label='TextField'
-                labelFor='TextField'
-                id='TextField'
+                label="TextField"
+                labelFor="TextField"
+                id="TextField"
                 disabled
-            />)
+            />
+        )
         const input = screen.getByRole('textbox')
 
         const text = 'this is my new text'
@@ -92,7 +93,7 @@ describe('<TextField />', () => {
 
     it('Is accessible by tab', () => {
         renderWithTheme(
-            <TextField label='TextField' labelFor='TextField' id='TextField' />
+            <TextField label="TextField" labelFor="TextField" id="TextField" />
         )
 
         const input = screen.getByLabelText('TextField')
