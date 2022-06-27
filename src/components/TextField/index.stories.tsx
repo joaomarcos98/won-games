@@ -11,7 +11,8 @@ export default {
         labelFor: 'Email',
         id: 'Email',
         initialValue: '',
-        placeholder: 'john.cage@gmail.com'
+        placeholder: 'john.cage@gmail.com',
+        error: ''
     },
     argTypes: {
         onInput: { action: 'changed' },
