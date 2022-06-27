@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components'
 import { RadioProps } from '.'
 
 export const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 `
 
 export const Input = styled.input`
