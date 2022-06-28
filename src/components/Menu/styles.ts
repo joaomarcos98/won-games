@@ -111,7 +111,6 @@ export const MenuFull = styled.nav<MenuFullProps>`
             margin: ${theme.spacings.xsmall};
             width: 2.4rem;
             height: 2.4rem;
-            border: 1px solid red;
 
             cursor: pointer;
         }
@@ -157,6 +156,7 @@ export const RegisterBox = styled.div`
 
 export const CreateAccount = styled.a`
     ${({ theme }) => css`
+        cursor: pointer;
         text-decoration: none;
         color: ${theme.colors.primary};
         border-bottom: 0.2rem solid ${theme.colors.primary};
