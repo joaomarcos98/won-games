@@ -3,7 +3,6 @@ import * as HeadingStyles from 'components/Heading/styles'
 import * as LogoStyles from 'components/Logo/styles'
 import media from 'styled-media-query'
 
-
 export const Wrapper = styled.main`
     display: grid;
     grid-template-columns: 1fr;
@@ -27,7 +26,7 @@ export const BannerBlock = styled.div`
             display: none;
         `}
 
-        &::after{
+        &::after {
             content: '';
             position: absolute;
             top: 0;
@@ -61,7 +60,6 @@ export const SubTitle = styled.h3`
         strong {
             color: ${theme.colors.primary};
         }
-
     `}
 `
 
@@ -71,7 +69,6 @@ export const Footer = styled.p`
         align-self: end;
         text-align: center;
     `}
-
 `
 
 export const Content = styled.div`
