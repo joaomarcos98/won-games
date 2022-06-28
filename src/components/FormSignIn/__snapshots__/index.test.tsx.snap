@@ -81,6 +81,19 @@ exports[`<FormSignIn /> should render the form 1`] = `
   overflow: hidden;
 }
 
+.c6 {
+  display: block;
+  font-size: 1.4rem;
+  color: #030517;
+  text-align: right;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:hover {
+  color: #0f1971;
+}
+
 .c0 .c1 {
   margin: 0.8rem 0;
 }
@@ -105,19 +118,6 @@ exports[`<FormSignIn /> should render the form 1`] = `
 .c9 a:hover {
   color: #29b3a3;
   border-color: #29b3a3;
-}
-
-.c6 {
-  display: block;
-  font-size: 1.4rem;
-  color: #030517;
-  text-align: right;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c6:hover {
-  color: #0f1971;
 }
 
 <body>
@@ -220,7 +220,7 @@ exports[`<FormSignIn /> should render the form 1`] = `
         <div
           class="c9"
         >
-          Don't have an account? 
+          Don't have an account?
            
           <a
             href="/sign-up"

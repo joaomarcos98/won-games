@@ -2,47 +2,47 @@ import Button from 'components/Button'
 import TextField from 'components/TextField'
 import Link from 'next/link'
 import { Email, Lock, AccountCircle } from 'styled-icons/material-outlined'
-import * as S from './styles'
+import { FormLink, FormWrapper } from 'components/Form'
 
 const FormSignUp = () => (
-    <S.Wrapper>
-        <form >
+    <FormWrapper>
+        <form>
             <TextField
-                name='name'
-                placeholder='Name'
-                type='text'
+                name="name"
+                placeholder="Name"
+                type="text"
                 icon={<AccountCircle />}
             />
             <TextField
-                name='email'
-                placeholder='Email'
-                type='email'
+                name="email"
+                placeholder="Email"
+                type="email"
                 icon={<Email />}
             />
             <TextField
-                name='password'
-                placeholder='Password'
-                type='password'
+                name="password"
+                placeholder="Password"
+                type="password"
                 icon={<Lock />}
             />
             <TextField
-                name='confirm-password'
-                placeholder='Confirm password'
-                type='password'
+                name="confirm-password"
+                placeholder="Confirm password"
+                type="password"
                 icon={<Lock />}
             />
-            <Button size='large' fullWidth >
+            <Button size="large" fullWidth>
                 Sign up now
             </Button>
 
-            <S.FormLink>
-                Already have an account? {' '}
-                <Link href='/sign-in'>
+            <FormLink>
+                Already have an account?{' '}
+                <Link href="/sign-in">
                     <a>Sign in</a>
                 </Link>
-            </S.FormLink>
+            </FormLink>
         </form>
-    </S.Wrapper>
+    </FormWrapper>
 )
 
 export default FormSignUp
